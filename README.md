@@ -1,3 +1,21 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+# jsm-tutorial-youtube-clone
+=======
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+# jsm-tutorial-youtube-clone
+=======
+>>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+# jsm-tutorial-youtube-clone
+=======
+>>>>>>> Stashed changes
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +86,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> fc33b33 (finished the sidebar)
+>>>>>>> Stashed changes
+=======
+>>>>>>> fc33b33 (finished the sidebar)
+>>>>>>> Stashed changes
+=======
+>>>>>>> fc33b33 (finished the sidebar)
+>>>>>>> Stashed changes
