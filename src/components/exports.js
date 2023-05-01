@@ -12,3 +12,7 @@ export { default as VideosFeed }
 from './VideosFeed';
 export { default as Sidebar }
 from './Sidebar';
+export { default as VideoCard }
+from './VideoCard';
+export { default as ChannelCard }
+from './ChannelCard';
