@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const ChannelDetails = () => {
+
+const ChannelDetails = ({channelDetails}) => {
+  console.log(channelDetails)
   return (
-    <div>ChannelDetails</div>
+      <div>Hello</div>
   )
 }
 
