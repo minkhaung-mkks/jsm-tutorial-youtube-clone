@@ -8,10 +8,10 @@ const VideosFeed = ({videos}) => {
   return (
     <Stack direction="row" flexWrap="wrap" justifyContent="flex-start" gap={2} margin='0 auto'>
         {videos.map((video,index)=>{
-            return video.id.videoId || video.id.channelId ? (
+            return video?.id?.videoId ?? video?.id?.channelId ? (
              <Box key={index}>
-                {video?.id.videoId && <VideoCard video={video} />}
-                {video?.id.channelId && <ChannelCard channelDetails={video} topMargin='2vh' />}
+                {video?.id?.videoId && <VideoCard video={video} />}
+                {video?.id?.channelId && <ChannelCard channelDetails={video} topMargin='2vh' />}
             </Box>
             ) : null
             
