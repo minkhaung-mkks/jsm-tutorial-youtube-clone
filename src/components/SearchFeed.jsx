@@ -15,8 +15,6 @@ const SearchFeed = () => {
       .then((data) => setVideos(data?.items))
   },[searchTerm])
 
-  console.log(videos)
-
   return (
     
     <Box p={2} sx={{

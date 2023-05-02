@@ -4,7 +4,6 @@ import { Stack,Box } from '@mui/material';
 import {VideoCard, ChannelCard} from './exports'
 
 const VideosFeed = ({videos}) => {
-    console.log(videos)
   return (
     <Stack direction="row" flexWrap="wrap" justifyContent="flex-start" gap={2} margin='0 auto'>
         {videos.map((video,index)=>{
