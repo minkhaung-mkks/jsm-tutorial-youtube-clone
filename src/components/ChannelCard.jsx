@@ -20,7 +20,7 @@ const ChannelCard = ({channelDetails, topMargin}) => {
         marginTop:topMargin
     }}> 
         <Link to={`/channel/${channelDetails?.id?.channelId}`}>
-          <CardContent sx={{ display:'flex', flexDirection:'column',justifyContent:'center', textAlign:'center', color:'#fff'}}>
+          <CardContent sx={{ padding:'0', display:'flex', flexDirection:'column',justifyContent:'center', textAlign:'center', color:'#fff'}}>
             <CardMedia
               image={channelDetails?.snippet?.thumbnails?.high?.url ?? demoProfilePicture}
               alt={channelDetails?.snippet?.channelTitle}
