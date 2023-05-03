@@ -42,7 +42,7 @@ const ChannelCard = ({channelDetails, topMargin}) => {
 
             </CardMedia>
             <Typography variant='h6'>
-              {channelDetails?.snippet?.title}
+              {channelDetails?.snippet?.channelTitle}
               <CheckCircle sx={{ fontSize: '12px', color: "#3e3e3e", marginLeft: '5px'}}> 
                 </CheckCircle>
             </Typography>
