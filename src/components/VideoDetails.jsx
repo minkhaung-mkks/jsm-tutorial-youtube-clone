@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 import { Typography,Box,Stack } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
 
-import { VideosFeed } from './exports'
+import { VideosFeed, Comments } from './exports'
 import { fetchFromAPI } from '../utils/FetchFromAPI';
 
 const VideoDetails = () => {
@@ -35,7 +35,7 @@ const VideoDetails = () => {
     <Box minHeight='120vh'>
       <Stack direction={{xs:'column', md:'row'}}>
         <Box flex={1}>
-          <Box sx={{width:'100%', position:'sticky', top:'10vh'}}>
+          <Box sx={{width:'100%'}}>
             <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls className="react-player"/>
             <Typography color="#fff" variant='h5' fontWeight='bold' p={2}> 
               {title}
@@ -59,6 +59,7 @@ const VideoDetails = () => {
                 </Typography>
               </Stack>
             </Stack>
+            <Comments/>
           </Box>
         </Box>
       <Box px={2} py={{xs:'5', md:'1'}} justifyContent='center' alignItems='center'>

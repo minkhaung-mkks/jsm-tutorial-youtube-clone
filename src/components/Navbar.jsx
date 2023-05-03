@@ -10,6 +10,7 @@ import SearchBar from './SearchBar';
  *
  * Main Navbar for the App
  * 
+ * 
  * Present on All Pages
  * 
  */
