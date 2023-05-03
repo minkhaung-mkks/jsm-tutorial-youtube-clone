@@ -22,7 +22,9 @@ const VideosFeed = ({videos, flexDirections}) => {
         {videos.map((video,index)=>{
             
             return video?.id?.videoId ?? video?.id?.channelId ? (
-             <Box key={index}>
+             <Box key={index} sx={{
+                width:{ xs:'100%',md:'20vw'}
+            }}>
                 {video?.id?.videoId && <VideoCard video={video} />}
                 {video?.id?.channelId && <ChannelCard channelDetails={video} topMargin='2vh' />}
             </Box>
