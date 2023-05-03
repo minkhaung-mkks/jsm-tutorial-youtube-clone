@@ -4,7 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { Paper,IconButton } from '@mui/material';
 
 import {Search} from '@mui/icons-material'
-
+/**
+ * 
+ * A Form element with an input field to act as a Search Bar.
+ * 
+ * @returns {JSX.Element} A Form with an input field, onSubmit redirects to SearchFeed with the value in the input field as the searchTerm.
+ */
 const SearchBar = () => {
 
     const [searchTerm, setSearchTerm] = useState('');

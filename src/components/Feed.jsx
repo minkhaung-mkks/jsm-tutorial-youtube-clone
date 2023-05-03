@@ -3,6 +3,13 @@ import {useState, useEffect} from 'react';
 import {Box, Stack, Typography} from '@mui/material'
 import {Sidebar,VideosFeed} from './exports';
 import {fetchFromAPI} from '../utils/FetchFromAPI'
+/**
+ * A component that displays a feed of videos based on a selected category. 
+ * 
+ * Includes the sidebar to select categories.
+ * 
+ * @returns {JSX.Element} - A Stack containing a Sidebar and a VideosFeed component.
+ */
 
 const Feed = () => {
 

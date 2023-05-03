@@ -3,6 +3,15 @@ import { Stack } from '@mui/material'
 
 import { categories } from '../utils/constants'
 
+/**
+ * A component that displays a list of categories as buttons and highlights the selected category.
+ * 
+ * @param {string} selectedCategory - The currently selected category.
+ * @param {function} setSelectedCategory - A function that sets the selected category.
+ * 
+ * @returns {JSX.Element} - A Stack containing buttons representing each category.
+ */
+
 const Sidebar = ({selectedCategory, setSelectedCategory}) => {
   return (
     <Stack

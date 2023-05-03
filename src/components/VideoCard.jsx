@@ -5,6 +5,18 @@ import { CheckCircle } from '@mui/icons-material';
 
 import {demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoChannelTitle} from '../utils/constants'
 
+
+/**
+ * A reusable component that displays a video card with a thumbnail, title, and channel information.
+ *
+ * @param {object} video - An object representing a video, containing an ID and snippet information.
+ * @param {object} video.id - An object containing an ID.
+ * @param {string} video.id.videoId - A String containing the ID of the video.
+ * @param {object} video.snippet - An object snippet information that includes Title,Thumbnail and Channel.
+ * 
+ * @returns {JSX.Element} A card component displaying the video thumbnail, title, and channel information.
+ */
+
 const VideoCard = ({video: {id: {videoId}, snippet} }) => {
   return (
     <Card 

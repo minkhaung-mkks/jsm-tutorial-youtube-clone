@@ -5,6 +5,13 @@ import {Box, Typography} from '@mui/material'
 import {VideosFeed} from './exports';
 import {fetchFromAPI} from '../utils/FetchFromAPI'
 
+/**
+ * 
+ * @param {urlParam} :searchTerm - a search query to display the related videos or channel on the feed. Included in the URL.
+ * 
+ * @returns {JSX.Element} A Box with a Feed of Videos and Channels relating to the Search Terms.
+ */
+
 const SearchFeed = () => {
 
   const {searchTerm} = useParams();

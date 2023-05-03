@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom';
 
 import { demoProfilePicture } from '../utils/constants';
 
+/** 
+ * 
+ * A reusable component that displays a card containing a channel's profile picture, name, and subscriber count (if available).
+ * 
+ * @param {object} channelDetails - An object containing information about the channel, including its ID, snippet, and statistics (if available).
+ * @param {object} channelDetails.statistics - An object containing statistics about the channel, including its subscriber count (if available).
+ * @param {string} channelDetails.statistics.subscriberCount - The number of subscribers of the channel.
+ * @param {string} topMargin - The value for the marginTop CSS property of the card.
+ * 
+ * @returns {JSX.Element} A card component displaying the channel's profile picture, name, and subscriber count (if available).
+ *
+*/
 const ChannelCard = ({channelDetails, topMargin}) => {
   return (
     <Box sx={{
@@ -34,6 +46,7 @@ const ChannelCard = ({channelDetails, topMargin}) => {
               <CheckCircle sx={{ fontSize: '12px', color: "#3e3e3e", marginLeft: '5px'}}> 
                 </CheckCircle>
             </Typography>
+            {/* only diplay sub count if the prop includes the stats */}
             {channelDetails?.statistics?.subscriberCount && (
                 <Typography sx={{fontSize:'15px', fontWeight:1000, color:'#3e3e3e'}}>
                     {parseInt(channelDetails?.statistics?.subscriberCount).toLocaleString('en-US') } Subscribers

@@ -6,6 +6,13 @@ import { Box} from '@mui/material';
 import {VideosFeed, ChannelCard} from './exports';
 import {fetchFromAPI} from '../utils/FetchFromAPI';
 
+/**
+ * A page component that displays the details of a YouTube channel, including its profile card and videos feed.
+ * @param {urlParam} :id - ID of the channel for the page to display included in the url.
+ *
+ * @returns {JSX.Element} - A page displaying the details of a YouTube channel, including its profile card and videos feed.
+ */
+
 const ChannelDetails = () => {
   const {id} = useParams();
 
