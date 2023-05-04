@@ -59,7 +59,7 @@ const VideoDetails = () => {
                 </Typography>
               </Stack>
             </Stack>
-            <Comments/>
+            <Comments id={id}/>
           </Box>
         </Box>
       <Box px={2} py={{xs:'5', md:'1'}} justifyContent='center' alignItems='center'>
