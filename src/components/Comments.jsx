@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography,Stack } from '@mui/material';
 import { fetchFromAPI } from '../utils/FetchFromAPI';
+import { decodeHtml } from '../utils/decoder';
 
 const Comments = ({id}) => {
   const [comments,setComments] = useState([])
@@ -65,7 +66,7 @@ const Comments = ({id}) => {
                     {comment?.snippet?.topLevelComment?.snippet?.authorDisplayName}
                     </Typography>
                     <Typography color='#f3fef3' variant="body1" sx={{ wordBreak:'break-all', maxWidth: {xs:'100%', md:'70vw'} }}>
-                        {comment?.snippet?.topLevelComment?.snippet?.textDisplay}
+                        {decodeHtml( comment?.snippet?.topLevelComment?.snippet?.textDisplay )}
                     </Typography>
                     <Typography color='#fefefe' variant="caption" sx={{ wordBreak:'break-all', maxWidth: {xs:'100%', md:'70vw'} }}>
                         {comment?.snippet?.topLevelComment?.snippet?.likeCount} Likes

@@ -1,5 +1,12 @@
 import axios from "axios";
-
+/**
+ * This function fetches data from the YouTube API using axios and the provided URL.
+ * @async
+ * @function fetchFromAPI
+ * @param {string} url - A string representing the URL to fetch data from.
+ * @returns {Promise<object>} A promise that resolves to the fetched data object.
+ * @throws {Error} Will throw an error if there's an issue with the network request.
+ */
 
 const BASE_URL = 'https://youtube-v31.p.rapidapi.com';
 
@@ -17,9 +24,6 @@ const options = {
 };
 
 export const fetchFromAPI = async(url) => {
-    // const res = await axios.get(`${BASE_URL}/${url}`, options);
-    // console.log(res
-    // return res.data
     const { data } = await axios.get(`${BASE_URL}/${url}`, options)
     return data
 }
