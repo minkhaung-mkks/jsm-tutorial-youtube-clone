@@ -1,72 +1,88 @@
 
-# Getting Started with Create React App
+# 🎬 YouTube Clone Project 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a clone tutorial project from [JS-Mastery](https://www.youtube.com/@javascriptmastery). You can view the tutorial [here](https://www.youtube.com/watch?v=FHTbsZEJspU).
 
-## Available Scripts
+Deployed on : [Netlify](https://gorgeous-fenglisu-921aca.netlify.app/)
 
-In the project directory, you can run:
+## 🚀 Enhancements
 
-### `npm start`
+Here are some of the key enhancements I made to the original project:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📝 **Comment Section**: Introduced a fully functional comment section.
+- 🐞 **Visual Error Fix**: Rectified a visual error that was creating gaps in the video cards when playlist data was fetched.
+- 💅 **CSS Modifications**: Updated the CSS for a more fluid and responsive layout.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📢 Comment Section Component
 
-### `npm test`
+The Comment Section component is a significant feature addition. Here's a brief overview of how it works:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- It accepts an `id` prop, which corresponds to a particular video.
+- This `id` is used to fetch comments for the video from the RapidAPI endpoint.
+- The fetched comments are then sorted based on the `likeCount`.
 
-### `npm run build`
+```javascript
+useEffect(() => {
+  fetchFromAPI(`commentThreads?part=snippet&videoId=${id}`)
+    .then((data) => {
+      const sortedComments = data.items.sort((a, b) => {
+        return b.snippet.topLevelComment.snippet.likeCount - a.snippet.topLevelComment.snippet.likeCount;
+      });
+      setComments(sortedComments);
+    });
+}, [id]);
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 👀 Visibility on Mobile View
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The comments are hidden by default on mobile view. They only become visible when the user clicks on the comment button.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```javascript
+{(isExpanded || !isMobile) && (
+  //... Comment rendering logic
+)}
+```
 
-### `npm run eject`
+The application checks the screen size upon rendering to determine whether the user is on a mobile device.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+useEffect(() => {
+  if (window.innerWidth >= 960) {
+    setIsMobile(false);
+    setIsExpanded(true);
+  }
+}, []);
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📱 Responsive Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The css units are changed to vw and vh in fitting cases to make the app look and behave the same across all devices of similar screen sizes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+# 🎓 Conclusion
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project has been a significant step in my learning journey. Here are some of my takeaways:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🧩 Discovering Material UI
 
-### Code Splitting
+This was my first exposure to Material UI, and I was amazed by its power and flexibility. Comparing how Material UI handles CSS versus my approach was enlightening. It also marked my first introduction to a UI library, which was exciting for me.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🎯 Understanding API Endpoints
 
-### Analyzing the Bundle Size
+The API endpoints used in this project were intuitive and straightforward, providing excellent insight into how I might build my own in the future. I'm excited to delve deeper into API development and create my own endpoints soon.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🐞 Debugging and Improvement
 
-### Making a Progressive Web App
+Finding and fixing bugs like the playlist glitch was a thrilling experience. Enhancing and iterating on the original tutorial, adding my touch to aspects like the CSS, was incredibly satisfying.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💬 Implementing Comments
 
-### Advanced Configuration
+Incorporating a comments section was simpler than expected, a fact that speaks volumes about JS-Mastery's effective teaching methods.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🚀 What's Next?
 
-### Deployment
+While I've learned a lot, I realize there's more to master. I plan to undertake 2-3 more tutorial projects to solidify my understanding before launching into independent projects. The journey thus far has been enriching, and I can't wait to see where it takes me next.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
+I'm always open to feedback and suggestions. If you have any advice or would like to share your thoughts, please feel free to reach me at [minkhaung.mkks@gmail.com](mailto:minkhaung.mkks@gmail.com).
